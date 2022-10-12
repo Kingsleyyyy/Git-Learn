@@ -1,0 +1,1246 @@
+<!--
+
+   //////       GENERATING RANDOM NUMBERS   
+  /////
+let y = Math.random() * 6 gives us a random decimal number btw 0 and 5.
+
+let y = Math.floor(Math.random() * 6) + 1 generates a rounded down number btw 0 and 6. We use this for dices. 
+
+let y = Math.floor(Math.random() * 20) + 1 -  For 20 cider dice.
+
+
+
+
+let username;
+
+document.getElementById("myButton").onclick = function () {
+  username = document.getElementById("myText").value
+  console.log(username).
+
+   To get the value of a text.
+}
+ ///////////////           SLICE       //////////////////////////////
+
+ extracts a section of a string and returns it as a new string without modifying the original string.
+
+ Note : Let's extract last name from full name.
+
+ 
+  EXAMPLE:
+let fullName = "Bro Code"
+
+let firstName
+let lastname
+
+lastName = fullName.slice(5)
+
+console.log(lastName)
+
+
+           /// METHOD CHAINING////////////////////////////////
+
+Calling one method after another in one continous line of code.
+
+let letter = userName.charAt(0).toUpperCase. It makes code cleaner and more readable.
+
+                  ///// IF & ELSE STATEMENTS//////
+let age = -5
+
+if (age > 18) {
+  console.log("You're an adult")
+  
+}
+else if (age < 0) {
+  console.log("dick")
+}
+
+else {
+  console.log("You're a child")
+}
+
+//////////// CHECKED PROPERTY OF RADIO BUTTONS////////
+
+When we click a button, what do we want to do? I would like to see if the checkbox is checked or not.
+
+
+
+document.getElementById("myButton").onclick = function () {
+  
+  if (document.getElementById("myCheckBox").checked) {
+    console.log("You're subscribed")
+  }
+  else {
+    console.log("You're not subscribed")
+  }
+}
+
+//Use the checked property. If the checkbox is checked, Let the user know they're subscribed. Store elements in a variable for readability.
+ 
+
+//////////     SWITCH/////////////////////////////////
+
+Used to perform different actions based on different conditions.
+
+It's more efficient than using many if statements
+
+ Use switch instead of if statements. Examine switch against case clauses.
+ Compare a variable against many matching conditions.
+
+let grade = "A"
+
+switch (grade) {
+  case "A":
+    console.log("You did great!")
+    break
+  case "B":
+    console.log("You did good!")
+    break
+  case "C":
+    console.log("You did okay!")
+    break
+  case "D":
+    console.log("You passed.....barely!")
+    break
+  case "E":
+    console.log("You FAILED !")
+    break
+  default:
+    console.log(grade, "is not a letter grade")
+}
+
+// If there are no matching cases, you can add a default clause.
+
+let grade = 80
+
+switch (true) {
+  case grade >= 90:
+    console.log("You did great!")
+    break
+  case grade >=80 :
+    console.log("You did good!")
+    break
+  case grade>=70:
+    console.log("You did okay!")
+    break
+  case grade>=60:
+    console.log("You passed.....barely!")
+    break
+  case grade < 60:
+    console.log("You FAILED !")
+    break
+  default:
+    console.log(grade, "is not a letter grade")
+}
+
+
+
+//////////////  AND/ OR OPERATORS////////////
+
+- And operator means both conditions must be true.
+- OR Either conditons can be true.
+
+NOTE: If you're working with a boolean variable. You don't have to add that boolean variable just use TRUE or FALSE.
+
+
+//////////// NOT LOGICAL OPERATOR//////////////////////////////////
+Reverse a condition's boolean value. If a condition is true, it's now false.
+
+
+EXAMPLE:
+let temp = 15
+
+if (!(temp > 0)) { // Check to see if our temp is not greater than zero.
+  console.log("It's warm outside")
+} else {
+  console.log("It's cold outside")
+}
+
+//Result : It's cold outside.
+
+   //  /////////////    WHILE LOOP   /////////////////////////
+
+       repeats some code infinetly while some condition is true.
+
+       if userName = " ". It means the user didn't type anything.
+
+       window.prompt enables the user enter something in the page.
+       Null means no value. When we enter userName || == null. We're stuck in a while loop.
+
+
+let userName = ""
+
+while (userName == "" || userName == null) {
+  userName = window.prompt("Enter your name")
+  
+}
+
+console.log("Hello", userName)
+
+Create some sort of way to escape the WHILE loop.
+
+//////////     DO WHILE LOOP//////////////////////
+
+Do something then check if the condition is still true. Run the code at least once. Do the code and check the condition.
+let userName 
+
+do {
+  userName = window.prompt("Enter your name")
+}while(userName == "")
+
+console.log("Hello", userName)
+
+   /////////////FOR LOOP////////////////////////
+
+   Repeat code a limited number of times.
+
+   i - temporary varaible to keep track of what iteration you're on.
+   We can also loop backwards. We can simulate a countdown by using for loop. 
+   We can also countdown using 2 & 3 not only one.
+
+
+   //////// BREAK & CONTINUE STATEMENTS///////////////////
+
+   break - breaks out of a loop entirely
+   continue- skip an iteration of a loop.
+
+   
+             EXAMPLE: 
+for (let i = 1; i <= 20; i++){
+  if (i == 13) {
+    break //continue
+  }
+  console.log(i)
+  
+}
+// Continue skips the iteration of a loop. It skips the 13
+  
+
+/////// NESTED LOOP///////////////////////////
+
+a loop inside another loop.
+Once we complete one iteration of the nested loop, we then complete one iteration of the outer loop.
+
+  The outer loop controls how many times we repeat the inner loop.
+
+  for (let i = 1; i <= 3; i ++){
+  
+  for (let j = 1; j <= 3; j += 1){
+    console.log(j)
+  }
+}
+
+The loop repeats 3 times
+let rows = window.prompt("Enter # of rows")
+let columns = window.prompt("Enter # of columns")
+
+
+for (let i = 1; i <= rows; i++){
+  for (let j = 1; j <= columns; j++){
+    document.getElementById("myRectangle").innerHTML += j
+  } 
+  document.getElementById("myRectangle").innerHTML += "<br>"
+}
+
+NOTE: The first document.getElementbyId inner for loop  prints one row and we add a 2nd line break to go down to the next row.
+
+We used it to print a rectangle.
+
+/////////// FUNCTIONS/////////////////////////
+
+Define a code once and use it. Always call your function.
+
+Pass arguments when you call out your function. However, you need a matching set of parameters. Put the paramaters in the function.
+
+////////////// TERNARY OPERATOR//////////////////
+
+Use return statement. Write a condition followed by ? as if we're asking a question.
+
+EXAMPLE: 
+
+let adult = checkAge(21)
+console.log(adult)
+
+function checkAge(age) {
+  
+  return age >= 18 ? true : false
+}
+
+ - return true if the expression is true and false, if the expression is false.
+
+
+
+///////////////// VARIABLE SCOPE///////////////////////
+
+let is used to declare variables limited to a block scope
+var - variables are limited to a function(){}
+
+using var for global variables would change the windows property. You can use the let keyword without changing the windows property of name.
+
+
+///////////////TEMPLATE LITERALS///////////////////
+
+let userName = "Bro"
+let items = 3
+let total = 75
+
+console.log(`Hello ${userName} you have ${items} as ${total}`)
+
+
+
+///////////////// TO LOCALE STRING OF NUMBERS///////////
+
+It returns a string with a language sensitive rep of the number. E.g
+
+Get a date as a string. Returns a date object as astring using locale settings.
+
+number.toLocaleString(locale, {options})
+
+'locale' = specify that language (undefined = default in browser)
+''
+                 ///////   EXAMPLE://///
+// // let myNum = 123456.789
+
+// // myNum = myNum.toLocaleString("en-US")
+// // //en-US is the locale. You can do for different numbers
+
+// // console.log(myNum)
+
+// // // The number gets formatted when you run it. You see comma in the browser window.
+
+// let myNum = 123456.789
+
+// myNum = myNum.toLocaleString("en-US", { style: "currency", currency: "USD" })
+
+// console.log(myNum)
+// // We format it with OPTIONS to string
+
+There are different styles i.e percent, unit & currency.
+
+////For percent,
+myNum.toLocaleString(undefined, {style: "percent"})
+
+
+/// NUMBER GUESSING GAME///////
+In every function make sure you iterate. When you've not started the game, say guesses is 0
+
+
+    /////////////////// EXAMPLE ///////////////////
+const answer = Math.floor(Math.random() * 10 + 1)
+
+let guesses = 0
+
+document.getElementById("submitButton").onclick = function () {
+  
+     
+  let guess = document.getElementById("guessField").value 
+  guesses++
+
+  if (guess == answer) {
+    alert(`${answer} is the #. It took you ${guesses} guesses`)
+  } else if (guess < answer) {
+    alert("Too small")
+    
+  } else {
+    alert("Too large!")
+  }
+
+
+   ///// CONVERSION IN TEMPS
+
+document.getElementById("submitButton").onclick = function () {
+   
+  let temp
+
+  if (document.getElementById("cButton").checked) {
+    temp = document.getElementById("textBox").value
+    temp = Number(temp)
+    temp = toCelsius(temp)
+    document.getElementById("tempLabel").innerHTML = temp + "0C"
+    
+  } else if (document.getElementById("fButton").checked) {
+     temp = document.getElementById("textBox").value
+     temp = Number(temp)
+     temp = toFahrenheit(temp)
+     document.getElementById("tempLabel").innerHTML = temp + "0C"
+    
+  } else {
+    document.getElementById("tempLabel").innerHTML = "Select a unit"
+  }
+
+}
+          //// THE FUNCTIONS//////
+function toCelsius(temp) {
+  return (temp-32) * (5/9)
+}
+
+function toFahrenheit(temp) {
+  return temp * 9 / 5 + 32
+  
+}
+}
+
+
+////////////////////////////// ARRAYS /////////////////
+
+Each value within an array is an element
+
+
+
+//// SPREAD OPERATOR, REST PARAMETERS////
+
+
+
+///// ARRAY FOR EACH CALLBACK FUNCTION//////////////////
+
+Executes a call back function for each element. invisble paramaters are element, index, array.
+
+
+////////////////JAVASCRIPT SUB-STRING METHOD///////
+
+syntax : string.substring(start,end)
+
+If start is greater than end, argument are swapped e.g (4,1) becomes (1,4)
+
+let text = "Hello world"
+
+let result = text.substring(4,1) which is 1,4
+
+It extracts 123
+
+
+  ///////////// ARRAY FOR EACH/////////////////////////////
+
+
+let students = ["uche", "dick", "harry"] 
+
+students.forEach(capitalize)
+students.forEach(print)
+
+
+function capitalize(element, index, array) {
+  array[index] = element[0].toUpperCase() + element.substring(1)
+  // This adds the first letter of the element to the substring.
+}
+
+function print(element) {
+  console.log(element)
+}
+
+
+///// SHUFFLING AN ARRAY//////////
+
+
+
+let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+
+shuffle(cards)
+ 
+cards.forEach(function (card){
+  console.log(card)
+})
+
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--){
+    
+    const j = Math.floor(Math.random() * (i + 1))
+
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+
+  }
+  return array
+}
+
+///////////NESTED FUNCTIONS////////////////////////
+
+
+
+////////// MAP/////////////////////
+
+An object that holds key value pairs
+const store = new Map([
+  ["t-shirt", 20],
+  ["jeans", 30],
+  ["socks", 10],
+  ["underwear", 50],
+
+
+  let shoppingCart = 0
+
+
+
+
+]);
+
+
+let shoppingCart = 0
+
+shoppingCart += store.get()
+
+store.forEach((value, key) => console.log(`${key} $${value}`))
+
+
+
+// You can iterate over the pairs in the map.
+
+//If you want to get one of the items there is a get method. 
+
+
+// You can get value from the map with a get() method.
+
+
+//////////////// CONSTRUTORS//////////////
+
+Special method of a class that accepts arguments and assigns properties.
+
+You use classes to create an object. We need constructors when we're 
+
+working with various objects from our class.
+
+
+////// PASSING FUNCTION AS A PARAMETER///////
+
+
+//////////FUNCTIONS INSIDE CURLY BRACES///////
+
+
+
+/////////OBJECT DESTRUCTURING/////////////////
+
+Extract data from objects and assign it to variables.
+
+Going to back to tailwind css;
+
+1. We first import the tailwind plugin function
+2. We now invoke the function with an anonymous function as the first argument 
+3. The argument object is passed as the second argument
+
+
+
+.....
+
+GETTERS & SETTERS
+
+Getters binds an object property to a function when that property is accessed.
+
+Setters bind an object property to a function when that property is assigned a value.
+
+E.g instead of GETTING a property, people want to change their gas.
+
+
+PASSING OBJECTS TO A FUNCTION AS AN ARGUMENT
+
+Pass an object from many objects as an argument to a function when you invoke that function.
+
+
+CREATING AN ARRAY OF OBJECTS.
+
+const cars = [car1, car2, car 3]
+
+cars[0].drive - Let one of the cars use the DRIVE method.
+
+Remember FOR loop. Car of CARS. Looping through the elements.
+
+- You can keep all objects organised within an array.
+
+class Car{
+  
+  constructor(model, year, color) {
+    this.model = model
+    this.year = year
+    this.color = color
+  }
+
+  drive() {
+    console.log(`You drive the ${this.model}`)
+  }
+}
+
+const car1 = new Car("Mustang", 2023, "red")
+const car2 = new Car("Corvette", 2024, "blue")
+const car3 = new Car("Lambo", 2022, "yellow")
+
+
+const cars = [car1, car2, car3]
+
+// console.log(cars[0].model)
+// console.log(cars[1].model)
+// console.log(cars[2].model)
+
+// cars[0].drive()
+// cars[1].drive()
+// cars[2].drive()
+
+startRace(cars)
+
+function startRace(cars) {
+  for (const car of cars) {
+    car.drive()
+  }
+}
+
+ANONYMOUS OBJECTS
+
+- Objects without a name. Not directly referenced. Less syntax. No need for unique names.
+
+To acess one of the props of one of the cards. You can do so directly by the object name or an array element.
+
+- Anonymous object is an object without a name.
+
+  let cards = [new Card("A", "Hearts"),
+                new Card("A", "Spades"),
+                 new Card("A", "Diamonds"),
+                  new Card("A", "Clubs"),
+                 new Card("2", "Hearts"),
+                  new Card("2", "Spades"),
+                   new Card("2", "Diamonds"),
+                    new Card("2", "Clubs"),
+]    
+
+- Above is an array of anonymous objects.
+
+cards.forEach displays all the props and values of the objects in the array. 
+
+- You don't have direct access to an anonymous object. You have to store it in something.
+
+ERROR HANDLING
+
+- Object with description that something went wrong.
+
+Use try and catch blocks( to catch the error
+
+Try - Put the wrong syntax in the try block
+
+Catch- Catch the error. Show us the type of error.
+
+
+Throw- Display what we want to see. executes a user defined error.
+
+Asynchronous - enables your program to start a potentially long-running task and stil be able to be responsive to other events. You can invoke a function while performing the long-running task
+
+SET TIMEOUT
+
+Pass in a callback, a function expression or an arrow function expression.
+
+When you setTimeOut, you can cleartimeOut.
+
+                   -- DATE METHOD
+date.tolocaleString() makes it in the string readable format.
+
+let date = new Date()
+If you don't pass in any argument. The default date and time would be used
+
+Passs 0 as an argument. It's a reference point.
+
+let date = new Date(Year, month, day, hour, min, second).
+
+
+let year = date.getFullYear()
+let dayofMonth = date.getDate()
+let dayofWeek = date.getDay()
+let month = date.getMonth()
+let hour = date
+
+You can set the time. Using date.set()
+
+date.setFullYear()
+date.setMonth()
+date.getDate()
+
+
+- We can  also format the date and time.
+
+
+
+let date = new Date()
+// let year = date.getFullYear()
+// let dayofMonth = date.getDate()
+// let month = date.getMonth()
+// let hour = date.getHours()
+// let minutes = date.getMinutes()
+
+
+
+
+
+// date.setFullYear(2024)
+
+
+// date = date.toLocaleString()
+document.getElementById("myLabel").innerHTML = formatTime(date)
+
+
+function formatDate(date) {
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let day = date.getDate()
+
+  return `${month}/${day}/${year}`
+}
+
+function formatTime(date) {
+
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
+  let amOrPm = hours >= 12? "pm" : "am"
+
+  return `${hours}:${minutes}:${seconds} ${amOrPm}`
+  
+
+}
+
+Military time to standard time. 
+
+- hours = (hours % 12) || 12
+
+if hours in military time is 12. The modulus of 12/12 is 0. That means 0 is the standard time (hour)
+
+
+       -- CLOCK THAT UPDATES EVERY SECOND
+       
+const myLabel = document.getElementById("myLabel")
+
+
+update()
+setInterval(update, 1000)
+
+function update() {
+  
+  let date = new Date()
+  myLabel.innerHTML = formatTime(date)
+
+
+  function formatTime() {
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+    let seconds = date.getSeconds() 
+
+    let amOrPm = hours >= 12 ? "pm" : "am"
+
+    hours = (hours % 12) || 12
+
+    hours = formatZeroes(hours)
+    minutes = formatZeroes(minutes)
+    seconds = formatZeroes(seconds)
+
+    return `${hours}: ${minutes}: ${seconds} ${amOrPm}`
+  }
+  function formatZeroes(time) {
+    
+    time = time.toString()
+
+    return time.length < 2 ? "0" + time : time
+  }
+
+  
+}
+
+         -- CONSOLE.TIME
+
+Starts a timer you can use to track how long an operation takes. Gives each timer a unique name.
+
+Console.time and console.timeEnd tracks how long a synchronous operation takes.
+
+  
+---- PROMISE
+
+A promise is an object representing the eventual completion or faliure of an asynchronous operation. A promise is either rejected or fulfilled.
+
+There are two parts which are producing & consuming
+
+
+Complex things that get clearer with projects
+
+- Object oriented programming
+- Promise, await, async
+- ES6 module, import, export.
+
+
+---- AWAIT keyword
+
+await keyword makes an async function wait for a promise.
+
+Awaiting an async function would store message as some text.
+
+- await is only valid in async functions.
+
+- Loading a file takes more than one asynchronous process. First, locate the file, open it then close it.
+
+- Use await to eliminate then and catch but it has to be within an async function.
+
+
+-- ES6 MODULE
+
+
+
+
+---- THE DOM
+
+----- ADD AND CHANGE HTML ELEMENTS USING JAVASCRIPT
+
+-- We want to add another element to the list item using the DOM.
+
+Using createElement & append.
+
+append - adds element at the end of the list
+prepend- adds element at the beginning of the list
+
+If you want to place an item somewhere within the middle of the list -
+
+myList.insertBefore(listItem, myList.getElementsByTagName("li")[1])
+
+--- HOW TO CHANGE CSS PROPERTIES OF ELEMENTS
+
+- Hex color picker is used to pick colours of your choice
+
+document.body - We're selecting the body of the element.
+
+- EVENT LISTENERS
+
+Syntax: addEventListener(event, function, useCapture)
+
+Event listeners link an event and function to an HTML element. We can wait for multiple events.
+
+- element.style.backgroundColor used to change properties of HTML element.
+
+UseCapture() - If the inner and outer DIV are waiting for the same listener, we can use the useCapture.
+
+- If two elements are in the space and are listening for the same event, you can specify which one has preference using TRUE as useCapture.
+
+-- ADD EVENT LISTENER TO WINDOW
+
+
+
+-- THE ELEMENT OBJECTS
+
+The following properties/methods can be used on all HTML elements.
+
+--Few examples: appendChild, addEventListener, classList, innerHTML, click() etc
+
+-- ClassList - Used to add multiple classes to elements. There are classList props/methods 
+
+example- add(), contains(), remove() e.t.c.
+
+-In create element- We create the element and add the class, then append to the document.
+
+- FETCH API
+
+
+
+
+
+
+
+
+
+- CANVAS
+
+--               DRAW LINES
+context is what you draw on.
+context.linewidth() - weight of the line.
+context.strokeStyle()- colour of the line.
+context.stroke() - End the drawing
+
+-You beginPath()
+-MoveTo(), LineTo(), stroke()
+
+--                 DRAW A TRIANGLE
+-- You beginPath()
+-  context.fill - To fill the triangle with a default black colour
+--context.strokeStyle()- To change colour of the border.
+
+--             DRAW A RECTANGLE
+
+- Use the strokeRect.
+
+-- DRAW A CIRCLE
+
+-- Use context.beginPath()
+
+context.fillStyle = "lightblue"
+context.strokeStyle = "red"
+context.lineWidth = 10
+context.beginPath()
+context.arc(250,250,200, 0, 2 * Math.PI)
+context.stroke()
+context.fill()
+   
+
+       -----        DRAW TEXT
+
+ Start with context.fillText()--
+ ontext.font = "50px MV Boli"
+context.fillStyle = "grey"
+context.textAlign = "center"
+context.fillText("YOU WIN!", canvas.width/2, canvas.height/2)
+
+
+
+-------- WINDOW OBJECT
+
+- Check the window object.
+- You can check the window properties with
+console.dir(window)
+
+- Get "href" with window.location.href
+- You can change the window.location.href to any site of your choice. Let's say google.com
+
+--- COOKIE
+Stores user information about the user in name=value pairs.
+
+document.cookie()
+console.log(document.cookie)
+
+-- UTCString date format - Friday, 23 September 2022 19:51:00 UTC
+
+
+const firstText = document.querySelector("#firstText")
+const lastText = document.querySelector("#lastText")
+const submitBtn = document.querySelector("#submitBtn")
+const cookieBtn = document.querySelector("#cookieBtn")
+
+
+submitBtn.addEventListener("click", () => {
+   
+  setCookie("firstName", firstText.value, 365)
+  setCookie("lastName", lastText.value, 365)
+
+})
+
+
+
+cookieBtn.addEventListener("click", () => {
+  
+  firstText.value = getCookie("firstName")
+  lastText.value = getCookie("lastName")
+
+
+})
+
+
+
+
+
+function setCookie(name, value, daysToLive) {
+  
+  const date = new Date()
+  date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
+  let expires = "expires=" + date.toUTCString()
+  document.cookie = `${name}=${value}; ${expires}; path=/`
+
+}
+
+function deleteCookie(name) {
+
+  setCookie(name, null, null)
+
+}
+
+function getCookie(name) {
+
+  const cDecoded = decodeURIComponent(document.cookie)
+  const cArray = cDecoded.split("; ")
+  let result = null
+
+  cArray.forEach(element => {
+    
+    if (element.indexOf(name) == 0) {
+      result = element.substring(name.length + 1)
+      
+    }
+  })
+
+  return result
+}
+
+
+  
+---                  BLOB (When i was making a save text file app)
+When making the save text as file app. Get the MIME types extension. MIME types with corresponding document types by their common extensions.
+ - Passing corresponding mime-type as value.
+
+- simple object that holds data stored in a file.
+
+syntax:
+
+ let blob = new Blob(["Blob Content"], {type: Blob Property containing MIME property} )
+ 
+ - ----------------------Blob as URL
+ 
+ A blob can be used as URL to show its content.
+ link.href = URL.createObjectURL(blob). 
+
+ We can create a link in javascript and download the bob.
+ link.click()
+
+ - From the example, by clicking on a link you download a dynamically-generated Blob with hello world contents as file.
+
+
+
+
+
+
+
+
+Read more on fetch API?
+
+
+- RETURN STATEMENT
+Only use curly braces when using return.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
